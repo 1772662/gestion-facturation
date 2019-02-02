@@ -7,6 +7,23 @@ public class CV {
 	private int nbAnnees;
 	private String[] competences = new String[10];
 	private String attentes;
+	
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println("Bienvenue chez Barette!");
+
+		String[] competencesUser1 = { "Travaillante", "Productive" };
+		// Instanciation objet cv1 de la classe CV
+		CV cv1 = new CV("Atmane", "Amina", "Information de Gestion", 2, competencesUser1,
+				"Avoir des explication dynamique et clair en classe.");
+		cv1.affiche();
+
+		String[] competencesUser2 = { "Résolution des problèmes", "Compétences informatiques" };
+		// Instanciation objet cv2 de la classe CV
+		CV cv2 = new CV("Voyer", "Loïc", "Information de Gestion", 2, competencesUser2, "Avoir des bonnes notes.");
+		cv2.affiche();
+
+	}
 
 	// Constreur avec paramètre complet
 	public CV(String nom, String prenom, String formation, int nbAnnees, String[] competences, String attentes) {
