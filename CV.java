@@ -69,4 +69,23 @@ public class CV {
 	}
 	// fin accesseur
 
+	// Methode qui permet d’afficher toutes les informations d’un CV.
+	public void affiche() {
+
+		String comptetencesList = "";
+
+		for (int i = 0; i < getCompetences().length; i++) {
+			if (getCompetences()[i] != null)
+				comptetencesList += "" + getCompetences()[i].toString() + ";";
+		}
+
+		String informations = "\nNom                             : " + getNom() + ""
+				+ "\nPrenom                          : " + getPrenom() + "\nFormation                       : "
+				+ getFormation() + "\nAnnée(s) expérience de travail  : " + getNbAnnees()
+				+ "\nCompetences                     : " + comptetencesList + "\nAttentes vis à vis le cours 4B4 : "
+				+ getAttentes();
+		System.out.println(informations);
+
+	}
+
 }
